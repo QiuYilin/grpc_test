@@ -1,0 +1,20 @@
+syntax="proto3";
+
+option java_multiple_files=true;
+option java_package="io.grpc.example.test1";
+option java_outer_classname="Test1Proto";
+option objc_class_prefix="HLW";
+
+package test1;
+
+service TestService{
+    rpc getData (Data) returns (MsgReply){}
+}
+
+message Data{
+    int32 data=1;
+}
+
+message MsgReply{
+    string message=1;
+}
